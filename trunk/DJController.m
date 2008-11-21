@@ -280,8 +280,9 @@ extern void QTSetProcessProperty(UInt32 type, UInt32 creator, size_t size, uint8
 }
 
 - (void)updateInfoField:(id)dummy {
-	[infoField setStringValue:[NSString stringWithFormat:@"%d songs, %@ total (ETA: %@)", 
-							   [playlist count], 
+	int count = [playlist count];
+	[infoField setStringValue:[NSString stringWithFormat:((count == 1) ? @"%d song, %@ total (ETA: %@)" : @"%d songs, %@ total (ETA: %@)"), 
+							   count, 
 							   [[NSValueTransformer valueTransformerForName:@"TimeValueTransformer"] transformedValue:[playlistController totalDuration]], 
 							   [timeFormatter stringForObjectValue:[self finishTime]]]];
 }
