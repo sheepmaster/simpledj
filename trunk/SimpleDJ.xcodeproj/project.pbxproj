@@ -36,6 +36,7 @@
 		40DBE4BB0E30D0A600A094BC /* QTMovie+SimpleDJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DBE4BA0E30D0A600A094BC /* QTMovie+SimpleDJ.m */; };
 		40DBE4C00E30D22100A094BC /* TimeFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DBE4BF0E30D22100A094BC /* TimeFormatter.m */; };
 		40EF6AF60ED6F9FF00C5F3FE /* iMediaBrowser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40EF6AF50ED6F9FF00C5F3FE /* iMediaBrowser.framework */; };
+		40EF6BDD0ED6FDC300C5F3FE /* iMediaBrowser.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 40EF6AF50ED6F9FF00C5F3FE /* iMediaBrowser.framework */; };
 		40F0CFC20E336403003CCB5A /* PlaylistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F0CFC00E336403003CCB5A /* PlaylistController.m */; };
 		40F51B8C0E7EE8BC006672B2 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F51B8B0E7EE8BC006672B2 /* IOKit.framework */; };
 		40F51DB10E7F12E8006672B2 /* HistoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F51DB00E7F12E8006672B2 /* HistoryController.m */; };
@@ -58,6 +59,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				40EF6BDD0ED6FDC300C5F3FE /* iMediaBrowser.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
