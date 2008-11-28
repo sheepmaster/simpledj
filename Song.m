@@ -7,14 +7,11 @@
 //
 
 #import "Song.h"
-#import "MetadataUtility.h"
 #import <QTKit/QTMovie.h>
+#import <iMediaBrowser/QTMovie+iMedia.h>
 
-static const NSString* TITLE = @"kMDItemTitle";
-static const NSString* AUTHORS = @"kMDItemAuthors";
-static const NSString* DURATION = @"kMDItemDurationSeconds";
 
-NSString* SongsType = @"BSSSSongsType";
+NSString* SongsType = @"BSSSongsType";
 
 @implementation Song
 
@@ -22,20 +19,18 @@ NSString* SongsType = @"BSSSSongsType";
 	if (self = [super init]) {
 		filename = [theFilename copy];
 		url = [theURL retain];
-		
-		MetadataUtility* mdu = [MetadataUtility sharedMetadataUtility];
-		
-		NSDictionary* metadata = [mdu getMetadataForFile:filename];
-		
-//		NSLog(@"metadata: %@", metadata);
-		
-		if (metadata) {
-			title = [[metadata objectForKey:TITLE] retain];
-			artist = [[[metadata objectForKey:AUTHORS] objectAtIndex:0] retain]; 
-			NSNumber* d = [metadata objectForKey:DURATION];
-			duration = [[NSNumber alloc] initWithFloat:[d floatValue]*1000];
-			
-//			NSLog(@"title: %@ artist: %@ duration: %@", title, artist, duration);
+				
+		[self movie];
+
+		if (movie) {
+			NSString* theTitle = [movie attributeWithFourCharCode:kUserDataTextFullName];
+			if (theTitle == nil) {
+				title = [[filename lastPathComponent] stringByDeletingPathExtension];
+			} else {
+				title = [theTitle copy];
+			}
+			artist = [[movie attributeWithFourCharCode:kUserDataTextArtist] copy];
+			duration = [[NSNumber alloc] initWithFloat:[movie durationInSeconds]*1000];
 		} else {
 			[self release];
 			self = nil;
@@ -118,9 +113,6 @@ NSString* SongsType = @"BSSSSongsType";
 	return datePlayed;
 }
 - (void)setDatePlayed:(NSDate*)date {
-	if (date == nil) {
-		date = [NSDate date];
-	}
 	[datePlayed autorelease];
 	datePlayed = [date retain];
 }
@@ -147,7 +139,7 @@ NSString* SongsType = @"BSSSSongsType";
 	if (movie == nil) {
 		NSError* error = nil;
 		
-		movie = [[QTMovie movieWithFile:filename error:&error] retain];
+		movie = [[QTMovie alloc] initWithFile:filename error:&error];
 		if (!movie) {
 			NSLog(@"error loading \"%@\": %@", filename, error);
 		}

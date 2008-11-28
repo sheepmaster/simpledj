@@ -90,7 +90,7 @@
 //		[playPauseButton setTitle:PauseSymbol];
 		
 		if (!moviePlayed && !cueActive) {
-			[song setDatePlayed:nil];
+			[song setDatePlayed:[NSDate date]];
 			[historyController addObject:song];
 			[historyController rearrangeObjects];
 			moviePlayed = YES;
@@ -329,7 +329,7 @@
 	float warningDuration = [defaults floatForKey:@"AdvanceWarningTime"];
 	if ((remaining < (crossfadeDuration + warningDuration)) && (userAttentionRequest == -1)) {
 		userAttentionRequest = [NSApp requestUserAttention:NSCriticalRequest];
-		NSLog(@"userAttentionRequest: %d", userAttentionRequest);
+//		NSLog(@"userAttentionRequest: %d", userAttentionRequest);
 	}
 	
 	[positionSlider setFloatValue:currentTime];
