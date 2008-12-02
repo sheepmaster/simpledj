@@ -122,7 +122,6 @@
 		40DBE4BE0E30D22100A094BC /* TimeFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeFormatter.h; sourceTree = "<group>"; };
 		40DBE4BF0E30D22100A094BC /* TimeFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeFormatter.m; sourceTree = "<group>"; };
 		40EF6AF50ED6F9FF00C5F3FE /* iMediaBrowser.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iMediaBrowser.framework; sourceTree = "<group>"; };
-		40F0CF140E335667003CCB5A /* MetadataUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetadataUtility.h; sourceTree = "<group>"; };
 		40F0CFC00E336403003CCB5A /* PlaylistController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaylistController.m; sourceTree = "<group>"; };
 		40F0CFC10E336403003CCB5A /* PlaylistController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaylistController.h; sourceTree = "<group>"; };
 		40F51B8B0E7EE8BC006672B2 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
@@ -283,7 +282,6 @@
 		401440680E77E239001E0B5B /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				40F0CF140E335667003CCB5A /* MetadataUtility.h */,
 				406AA7D50E927DDB00CAD8C6 /* TableColumnDateFormatter.h */,
 				406AA7D40E927DDB00CAD8C6 /* TableColumnDateFormatter.m */,
 				40DBE4BE0E30D22100A094BC /* TimeFormatter.h */,
