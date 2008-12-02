@@ -291,7 +291,7 @@
 	movie = newMovie;
 	[player setMovie:movie];
 	[movie setIdling:YES];
-	[self updateOutputDevice];
+	[movie setOutputDevice:activeOutputDevice];
 	[self update:nil];
 	
 	NSNotificationCenter* defaultCenter = [NSNotificationCenter defaultCenter];
