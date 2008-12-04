@@ -15,6 +15,8 @@
 #define DEFAULT_NORMAL_MOVE_TIME 2.0
 #define DEFAULT_FAST_MOVE_TIME 0.5
 
+#define SCROLL_WHEEL_NUDGE 0.02
+
 @implementation MySlider
 /*
 - (id)initWithFrame:(NSRect)rect {
@@ -186,6 +188,11 @@
 	}
 	[super mouseDown:theEvent];
 	[self setAllowsTickMarkValuesOnly:allowsTickMarkValuesOnly];
+}
+
+- (void)scrollWheel:(NSEvent*)theEvent {
+	float value = [self floatValue]+[theEvent deltaY]*SCROLL_WHEEL_NUDGE;
+	[self moveTo:value];
 }
 
 - (void)moveTo:(float)newValue {

@@ -157,4 +157,8 @@
 	}
 }
 
+- (void)scrollWheel:(NSEvent*)theEvent {
+	[volumeSlider scrollWheel:theEvent];
+}
+
 @end
