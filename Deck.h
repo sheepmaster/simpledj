@@ -15,6 +15,8 @@
 @interface Deck : NSBox {
 	IBOutlet DeckController* controller;
 	
+	IBOutlet NSSlider* volumeSlider;
+	
 	BOOL isHighlighted;
 }
 

@@ -34,6 +34,8 @@
 - (NSTimeInterval)fastMoveTime;
 - (void)setFastMoveTime:(NSTimeInterval)newTime;
 
+- (void)moveTo:(float)newValue;
+
 - (void)moveSlider:(NSEvent*)theEvent;
 - (void)stop;
 - (BOOL)setVelocity:(NSEvent*)theEvent;
