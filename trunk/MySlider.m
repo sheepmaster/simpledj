@@ -16,21 +16,20 @@
 #define DEFAULT_FAST_MOVE_TIME 0.5
 
 @implementation MySlider
-
+/*
 - (id)initWithFrame:(NSRect)rect {
 	if (self = [super initWithFrame:rect]) {
+		increaseValueKeyCode = -1;
+		decreaseValueKeyCode = -1;
 	}
 //	NSLog(@"initializing new Slider %@", self);
 	return self;
 }
+*/
 
 - (void)awakeFromNib {
-//	increaseValueKeyCode = -1;
-//	decreaseValueKeyCode = -1;
-	
 	normalMoveTime = DEFAULT_NORMAL_MOVE_TIME;
 	fastMoveTime = DEFAULT_FAST_MOVE_TIME;
-	
 }
 
 - (unsigned short)increaseValueKeyCode {
@@ -178,6 +177,15 @@
 		}
 	}
 	return NO;
+}
+
+- (void)mouseDown:(NSEvent*)theEvent {
+	BOOL allowsTickMarkValuesOnly = [self allowsTickMarkValuesOnly];
+	if ([theEvent modifierFlags] & NSShiftKeyMask) {
+		[self setAllowsTickMarkValuesOnly:YES];
+	}
+	[super mouseDown:theEvent];
+	[self setAllowsTickMarkValuesOnly:allowsTickMarkValuesOnly];
 }
 
 - (void)moveTo:(float)newValue {

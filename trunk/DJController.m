@@ -117,20 +117,20 @@ extern void QTSetProcessProperty(UInt32 type, UInt32 creator, size_t size, uint8
 	
 	[self updateIndividualVolumes];
 	
-	[crossFader setAltIncrementValue:0.5];
+//	[crossFader setAltIncrementValue:0.5];
 	
-	[crossFader setIncreaseValueKeyCode:12];
-	[crossFader setDecreaseValueKeyCode:0];
-	[deck1Volume setIncreaseValueKeyCode:13];
-	[deck1Volume setDecreaseValueKeyCode:1];
-	[deck2Volume setIncreaseValueKeyCode:14];
-	[deck2Volume setDecreaseValueKeyCode:2];
-	[volumeSlider setIncreaseValueKeyCode:15];
-	[volumeSlider setDecreaseValueKeyCode:3];
+	[crossFader setIncreaseValueKeyCode:12];   // q
+	[crossFader setDecreaseValueKeyCode:0];    // a
+	[deck1Volume setIncreaseValueKeyCode:19];  // 2
+	[deck1Volume setDecreaseValueKeyCode:13];  // w
+	[deck2Volume setIncreaseValueKeyCode:1];   // s
+	[deck2Volume setDecreaseValueKeyCode:7];   // x
+	[volumeSlider setIncreaseValueKeyCode:17]; // t
+	[volumeSlider setDecreaseValueKeyCode:5];  // g
 	
 	[self updateAutoFadeStatus];
 	
-	[[NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(updateInfoField:) userInfo:nil repeats:YES] fire];
+	[[NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateInfoField:) userInfo:nil repeats:YES] fire];
 }
 
 - (void)loadAudioDevices {
@@ -237,7 +237,7 @@ extern void QTSetProcessProperty(UInt32 type, UInt32 creator, size_t size, uint8
 - (BOOL)validateToolbarItem:(NSToolbarItem *)item {
 	BOOL enabled = YES;
 	if (item == autofadeToolbarItem) {
-		[item setLabel:((autofadeStatus == AutoFadeActive) ? @"Stop" : @"Start")];
+//		[item setLabel:((autofadeStatus == AutoFadeActive) ? @"Stop" : @"Start")];
 		[item setImage:[NSImage imageNamed:((autofadeStatus == AutoFadeActive) ? @"StopCrossfade" : @"StartCrossfade")]];
 		if (autofadeStatus == AutoFadeCancelled) {
 			enabled = NO;
