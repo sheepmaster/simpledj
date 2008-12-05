@@ -51,7 +51,8 @@
 	
 	for (Song* song in [history arrangedObjects]) {
 //		NSLog(@"#EXTINF:%d,%@\n%@", [[song duration] intValue], [song description], [song filename]);
-		[pl appendFormat:@"#EXTINF:%d,%@\n%@\n", [[song duration] intValue], [song description], [song filename]];
+		int duration = [[song duration] floatValue]/1000;
+		[pl appendFormat:@"#EXTINF:%d,%@\n%@\n", duration, [song description], [song filename]];
 	}
 	
 	
