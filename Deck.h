@@ -16,6 +16,7 @@
 	IBOutlet DeckController* controller;
 	
 	IBOutlet NSSlider* volumeSlider;
+	IBOutlet NSButton* skipButton;
 	
 	BOOL isHighlighted;
 }

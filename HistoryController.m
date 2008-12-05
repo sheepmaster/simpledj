@@ -56,7 +56,7 @@
 	
 	
 	NSError* error;
-	if (![pl writeToFile:[sheet filename] atomically:YES encoding:NSISOLatin1StringEncoding error:&error]) {
+	if (![pl writeToFile:[sheet filename] atomically:YES encoding:NSUTF8StringEncoding error:&error]) {
 		[[NSAlert alertWithError:error] runModal];
 	}
 }
