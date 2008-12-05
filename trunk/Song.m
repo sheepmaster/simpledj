@@ -25,10 +25,9 @@ NSString* SongsType = @"BSSSongsType";
 		if (movie) {
 			NSString* theTitle = [movie attributeWithFourCharCode:kUserDataTextFullName];
 			if (theTitle == nil) {
-				title = [[filename lastPathComponent] stringByDeletingPathExtension];
-			} else {
-				title = [theTitle copy];
+				theTitle = [[filename lastPathComponent] stringByDeletingPathExtension];
 			}
+			title = [theTitle copy];
 			artist = [[movie attributeWithFourCharCode:kUserDataTextArtist] copy];
 			duration = [[NSNumber alloc] initWithFloat:[movie durationInSeconds]*1000];
 		} else {
