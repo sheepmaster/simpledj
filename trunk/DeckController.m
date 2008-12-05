@@ -68,6 +68,7 @@
 }
 
 - (IBAction)skip:(id)sender {
+	[self pause:sender];
 	[playbackController advanceSongForDeck:self];
 }
 

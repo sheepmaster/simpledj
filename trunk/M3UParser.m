@@ -14,7 +14,11 @@
 + (NSArray*)filenamesInM3UFile:(NSString*)filename {
 	NSMutableArray* filenames = [NSMutableArray array];
 	NSString* dirname = [filename stringByDeletingLastPathComponent];
-	NSArray* lines = [[NSString stringWithContentsOfFile:filename] componentsSeparatedByString:@"\n"];
+	NSError* error;
+	NSStringEncoding encoding;
+	NSArray* lines = [[NSString stringWithContentsOfFile:filename 
+											usedEncoding:&encoding 
+												   error:&error] componentsSeparatedByString:@"\n"];
 	if (!lines) {
 		return nil;
 	}

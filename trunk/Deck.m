@@ -161,4 +161,13 @@
 	[volumeSlider scrollWheel:theEvent];
 }
 
+- (void)swipeWithEvent:(NSEvent*)theEvent {
+	float deltaX = [theEvent deltaX];
+	if (deltaX > 0) {
+		[controller cue:nil];
+	} else if (deltaX < 0) {
+		[skipButton performClick:nil];
+	}
+}
+
 @end
