@@ -287,6 +287,10 @@ extern void QTSetProcessProperty(UInt32 type, UInt32 creator, size_t size, uint8
 							   [timeFormatter stringForObjectValue:[self finishTime]]]];
 }
 
+- (void)queueSongForDeck:(DeckController*)deck {
+	[playlistController insertObject:[deck song] atArrangedObjectIndex:0];
+}
+
 - (void)advanceSongForDeck:(DeckController*)deck {
 	[deck1 stopAutoFade];
 	[deck2 stopAutoFade];

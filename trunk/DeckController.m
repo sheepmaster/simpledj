@@ -127,6 +127,9 @@
 }
 
 - (IBAction)clearMovie:(id)sender {
+	if ([[NSApp currentEvent] modifierFlags] & NSShiftKeyMask) {
+		[playbackController queueSongForDeck:self];
+	}
 	[self pause:sender];
 	[self stopMovie];
 	[self setSong:nil];

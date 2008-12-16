@@ -20,16 +20,22 @@ NSString* SongsType = @"BSSSongsType";
 		filename = [theFilename copy];
 		url = [theURL retain];
 				
-		[self movie];
+//		[self movie];
 
-		if (movie) {
-			NSString* theTitle = [movie attributeWithFourCharCode:kUserDataTextFullName];
-			if (theTitle == nil) {
-				theTitle = [[filename lastPathComponent] stringByDeletingPathExtension];
+//		if (movie) {
+		MDItemRef item = MDItemCreate(kCFAllocatorDefault, (CFStringRef)theFilename);
+		if (item) {
+			id _artist = (id)MDItemCopyAttribute(item, kMDItemAuthors);
+			id _duration = (id)MDItemCopyAttribute(item, kMDItemDurationSeconds);
+			id _title = (id)MDItemCopyAttribute(item, kMDItemTitle);
+			if (_title == nil) {
+				_title = [[filename lastPathComponent] stringByDeletingPathExtension];
 			}
-			title = [theTitle copy];
-			artist = [[movie attributeWithFourCharCode:kUserDataTextArtist] copy];
-			duration = [[NSNumber alloc] initWithFloat:[movie durationInSeconds]*1000];
+			title = [_title copy];
+			artist = [[_artist objectAtIndex:0] copy];
+			duration = [_duration retain];
+			
+			
 		} else {
 			[self release];
 			self = nil;
