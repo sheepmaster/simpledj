@@ -86,6 +86,7 @@ typedef enum {
 - (NSDate*)finishTime;
 - (void)updateInfoField:(id)dummy;
 
+- (void)queueSongForDeck:(DeckController*)deck;
 - (void)advanceSongForDeck:(DeckController*)deck;
 - (void)moveSongWithIndex:(int)index toDeck:(DeckController*)deck;
 
