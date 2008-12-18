@@ -28,6 +28,8 @@
 		406AA9AC0E9292C900CAD8C6 /* NSWindowController+Toggle.m in Sources */ = {isa = PBXBuildFile; fileRef = 406AA9AB0E9292C900CAD8C6 /* NSWindowController+Toggle.m */; };
 		4086A8F50E1FC456002EF711 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 4086A8F40E1FC456002EF711 /* Deck.m */; };
 		40AB644F0E40B36E00835A05 /* MySlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 40AB644E0E40B36E00835A05 /* MySlider.m */; };
+		40C22A850EFA97DB00438859 /* iMediaBrowser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40C22A800EFA97D800438859 /* iMediaBrowser.framework */; };
+		40C22A860EFA97E000438859 /* iMediaBrowser.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 40C22A800EFA97D800438859 /* iMediaBrowser.framework */; };
 		40CEDC090E7132B6000B127B /* AudioDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 40CEDC080E7132B6000B127B /* AudioDevice.m */; };
 		40CEDC0C0E7132C7000B127B /* AudioDeviceList.m in Sources */ = {isa = PBXBuildFile; fileRef = 40CEDC0B0E7132C7000B127B /* AudioDeviceList.m */; };
 		40CEDCC40E713E83000B127B /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CEDCC30E713E83000B127B /* CoreAudio.framework */; };
@@ -35,8 +37,6 @@
 		40DA7E660EA3F14200DE40F0 /* M3UParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DA7E650EA3F14200DE40F0 /* M3UParser.m */; };
 		40DBE4BB0E30D0A600A094BC /* QTMovie+SimpleDJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DBE4BA0E30D0A600A094BC /* QTMovie+SimpleDJ.m */; };
 		40DBE4C00E30D22100A094BC /* TimeFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DBE4BF0E30D22100A094BC /* TimeFormatter.m */; };
-		40EF6AF60ED6F9FF00C5F3FE /* iMediaBrowser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40EF6AF50ED6F9FF00C5F3FE /* iMediaBrowser.framework */; };
-		40EF6BDD0ED6FDC300C5F3FE /* iMediaBrowser.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 40EF6AF50ED6F9FF00C5F3FE /* iMediaBrowser.framework */; };
 		40F0CFC20E336403003CCB5A /* PlaylistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F0CFC00E336403003CCB5A /* PlaylistController.m */; };
 		40F51B8C0E7EE8BC006672B2 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F51B8B0E7EE8BC006672B2 /* IOKit.framework */; };
 		40F51DB10E7F12E8006672B2 /* HistoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F51DB00E7F12E8006672B2 /* HistoryController.m */; };
@@ -52,6 +52,44 @@
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		40C22A7B0EFA97D800438859 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40C22A730EFA97D800438859 /* iMediaBrowse.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1107320486CEB800E47090 /* iMediaTester.app */;
+			remoteInfo = iMediaTester;
+		};
+		40C22A7D0EFA97D800438859 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40C22A730EFA97D800438859 /* iMediaBrowse.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E5DF5D160D68C03000E2FF8A /* iMediaTesterSingle.app */;
+			remoteInfo = iMediaTesterSingle;
+		};
+		40C22A7F0EFA97D800438859 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40C22A730EFA97D800438859 /* iMediaBrowse.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 791679FE0975255000D9EF74 /* iMediaBrowser.framework */;
+			remoteInfo = iMediaBrowser;
+		};
+		40C22A810EFA97D800438859 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40C22A730EFA97D800438859 /* iMediaBrowse.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FD8EE5BC0C697C6C00E425BB /* MetadataTool */;
+			remoteInfo = MetadataTool;
+		};
+		40C22A830EFA97D800438859 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40C22A730EFA97D800438859 /* iMediaBrowse.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5B1AA73A0D6C7320003585CD /* movietool */;
+			remoteInfo = movietool;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		4013BB470D01F4AE00BC56C8 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -59,7 +97,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				40EF6BDD0ED6FDC300C5F3FE /* iMediaBrowser.framework in CopyFiles */,
+				40C22A860EFA97E000438859 /* iMediaBrowser.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +147,7 @@
 		4086A8F40E1FC456002EF711 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
 		40AB644D0E40B36E00835A05 /* MySlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySlider.h; sourceTree = "<group>"; };
 		40AB644E0E40B36E00835A05 /* MySlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySlider.m; sourceTree = "<group>"; };
+		40C22A730EFA97D800438859 /* iMediaBrowse.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = iMediaBrowse.xcodeproj; path = imedia/iMediaBrowse.xcodeproj; sourceTree = "<group>"; };
 		40CEDC070E7132B6000B127B /* AudioDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioDevice.h; sourceTree = "<group>"; };
 		40CEDC080E7132B6000B127B /* AudioDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioDevice.m; sourceTree = "<group>"; };
 		40CEDC0A0E7132C7000B127B /* AudioDeviceList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioDeviceList.h; sourceTree = "<group>"; };
@@ -121,7 +160,6 @@
 		40DBE4BA0E30D0A600A094BC /* QTMovie+SimpleDJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "QTMovie+SimpleDJ.m"; sourceTree = "<group>"; };
 		40DBE4BE0E30D22100A094BC /* TimeFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeFormatter.h; sourceTree = "<group>"; };
 		40DBE4BF0E30D22100A094BC /* TimeFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeFormatter.m; sourceTree = "<group>"; };
-		40EF6AF50ED6F9FF00C5F3FE /* iMediaBrowser.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iMediaBrowser.framework; sourceTree = "<group>"; };
 		40F0CFC00E336403003CCB5A /* PlaylistController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaylistController.m; sourceTree = "<group>"; };
 		40F0CFC10E336403003CCB5A /* PlaylistController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaylistController.h; sourceTree = "<group>"; };
 		40F51B8B0E7EE8BC006672B2 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
@@ -150,7 +188,7 @@
 				40367D580E1E6884005B79EB /* QTKit.framework in Frameworks */,
 				40CEDCC40E713E83000B127B /* CoreAudio.framework in Frameworks */,
 				40F51B8C0E7EE8BC006672B2 /* IOKit.framework in Frameworks */,
-				40EF6AF60ED6F9FF00C5F3FE /* iMediaBrowser.framework in Frameworks */,
+				40C22A850EFA97DB00438859 /* iMediaBrowser.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,7 +198,6 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				40EF6AF50ED6F9FF00C5F3FE /* iMediaBrowser.framework */,
 				40F51B8B0E7EE8BC006672B2 /* IOKit.framework */,
 				40CEDCC30E713E83000B127B /* CoreAudio.framework */,
 				40367D570E1E6884005B79EB /* QTKit.framework */,
@@ -199,6 +236,7 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				40C22A730EFA97D800438859 /* iMediaBrowse.xcodeproj */,
 			);
 			name = SimpleDJ;
 			sourceTree = "<group>";
@@ -319,6 +357,18 @@
 			name = Icons;
 			sourceTree = "<group>";
 		};
+		40C22A740EFA97D800438859 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				40C22A7C0EFA97D800438859 /* iMediaTester.app */,
+				40C22A7E0EFA97D800438859 /* iMediaTesterSingle.app */,
+				40C22A800EFA97D800438859 /* iMediaBrowser.framework */,
+				40C22A820EFA97D800438859 /* MetadataTool */,
+				40C22A840EFA97D800438859 /* movietool */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -359,12 +409,56 @@
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* SimpleDJ */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 40C22A740EFA97D800438859 /* Products */;
+					ProjectRef = 40C22A730EFA97D800438859 /* iMediaBrowse.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* SimpleDJ */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		40C22A7C0EFA97D800438859 /* iMediaTester.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = iMediaTester.app;
+			remoteRef = 40C22A7B0EFA97D800438859 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		40C22A7E0EFA97D800438859 /* iMediaTesterSingle.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = iMediaTesterSingle.app;
+			remoteRef = 40C22A7D0EFA97D800438859 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		40C22A800EFA97D800438859 /* iMediaBrowser.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = iMediaBrowser.framework;
+			remoteRef = 40C22A7F0EFA97D800438859 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		40C22A820EFA97D800438859 /* MetadataTool */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = MetadataTool;
+			remoteRef = 40C22A810EFA97D800438859 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		40C22A840EFA97D800438859 /* movietool */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = movietool;
+			remoteRef = 40C22A830EFA97D800438859 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8D1107290486CEB800E47090 /* Resources */ = {
@@ -504,7 +598,6 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = SimpleDJ;
 				WRAPPER_EXTENSION = app;
 			};
@@ -522,7 +615,6 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CONFIGURATION_BUILD_DIR = /Applications;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 			};
