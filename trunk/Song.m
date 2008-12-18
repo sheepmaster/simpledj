@@ -21,8 +21,13 @@ NSString* SongsType = @"BSSSongsType";
 		url = [theURL retain];
 				
 //		[self movie];
-
+//
 //		if (movie) {
+//			NSLog(@"artist: '%@' title: '%@' duration: %f", 
+//				  [movie attributeWithFourCharCode:kUserDataTextFullName], 
+//				  [movie attributeWithFourCharCode:kUserDataTextArtist], 
+//				  [movie durationInSeconds]*1000);
+//		}
 		MDItemRef item = MDItemCreate(kCFAllocatorDefault, (CFStringRef)theFilename);
 		if (item) {
 			id _artist = (id)MDItemCopyAttribute(item, kMDItemAuthors);
@@ -33,9 +38,7 @@ NSString* SongsType = @"BSSSongsType";
 			}
 			title = [_title copy];
 			artist = [[_artist objectAtIndex:0] copy];
-			duration = [_duration retain];
-			
-			
+			duration = [[NSNumber alloc] initWithFloat:[_duration floatValue]*1000];
 		} else {
 			[self release];
 			self = nil;
