@@ -431,6 +431,10 @@ static inline double myAdd(double a, double b, double c) {
 	}
 }
 
+- (IBAction)orderFrontAboutPanel:(id)sender {
+	[NSApp orderFrontStandardAboutPanel:sender];
+}
+
 - (void)saveLoadedSongs {
 	NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
 	[defaults setObject:[[deck1 song] filename] forKey:@"Deck1Song"];

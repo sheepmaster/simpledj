@@ -96,6 +96,8 @@ typedef enum {
 
 - (IBAction)loadSongs:(id)sender;
 
+- (IBAction)orderFrontAboutPanel:(id)sender;
+
 - (void)saveLoadedSongs;
 
 - (BOOL)openDirectory:(NSString *)dirname;
